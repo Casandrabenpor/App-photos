@@ -9,11 +9,11 @@ export const TopBar = ({ location }) => {
       <ul>
         {location && location.pathname === "/myphotosPage" ? (
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">HOME</Link>
           </li>
         ) : (
           <li>
-            <Link to="/myphotosPage">My photos</Link>
+            <Link to="/myphotosPage">MY PHOTOS</Link>
           </li>
         )}
       </ul>
