@@ -3,11 +3,12 @@
     border: 1px solid #a9a9a9;
     font-size: 14px;
     padding: 4px 8px;
+    width: 500px;
   }
   
   .search-button {
-    height: 24px;
-    width: 24px;
+    height: 50px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +21,6 @@
   }
   .search-form {
     display: flex;
-    column-gap: 8px;
     align-items: center;
+   justify-content: flex-end;
   }
