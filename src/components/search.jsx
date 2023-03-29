@@ -9,7 +9,7 @@ export const Search = () => {
     const handleSearch = (event) => {
       event.preventDefault();
       const query = event.target.elements.search.value;
-      dispatch(loadPhotos(query));
+      dispatch(loadPhotos(query)); 
     };
   return (
     <form  className="search-form" onSubmit={handleSearch}>
