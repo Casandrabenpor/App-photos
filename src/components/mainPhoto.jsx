@@ -1,10 +1,12 @@
 import "./mainPhoto.css";
-import Background from "../assets/mar.jpg";
+import Background from "../assets/mar2.jpg";
 
-export const MainPhoto = (props)=>{
-    return (
-        <div className={props.className}>
-        <img  className={props.className} src={Background} alt="Mar" />
-        </div>
-    );
+export const MainPhoto = (props) => {
+  return (
+    <div className={props.className}>
+    
+        <img className={props.className} src={Background} alt="Mar" />
+
+    </div>
+  );
 };

@@ -1,9 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { store } from './app/store';
 import reportWebVitals from "./reportWebVitals";
 import { HomePage } from "./pages/homePage";
 import { MyPhotos } from "./pages/myphotosPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
 
 
 const container = document.getElementById("root");
@@ -11,14 +13,14 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/myphotosPage" element={<MyPhotos />} />
       </Routes>
     </BrowserRouter>
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>
 );
 
