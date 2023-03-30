@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Search } from "../components/search";
 import { addToFavorites } from "../features/favoriteSlice/favoriteSlice";
 import { ApiPhotos } from "../components/apiPhotos";
-import { Footer } from "../components/footer";
+// import { Footer } from "../components/footer";
 
 
 export const MyPhotos = () => {
@@ -16,7 +16,7 @@ export const MyPhotos = () => {
         <TopBar location={location} />
         <Search/>
        
-         <Footer className="footer"/> 
+         {/* <Footer className="footer"/>  */}
       </>
     );
   };
