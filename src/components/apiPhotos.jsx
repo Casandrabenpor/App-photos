@@ -9,7 +9,8 @@ export const ApiPhotos = (props) => {
     dispatch(addToFavorites(props.photo));
   
   }
-
+ 
+  
 
 
   return (
@@ -17,8 +18,10 @@ export const ApiPhotos = (props) => {
       <img className="img-cover" alt="random" src={props.photo.url} />
       <ion-icon name="heart-outline" onClick={handleHeart}></ion-icon>
       <div className="icon-download">
-        <ion-icon name="cloud-download-outline"></ion-icon>
+        <ion-icon name="cloud-download-outline"  value="download"></ion-icon>
       </div>
     </div>
   );
 };
+
+

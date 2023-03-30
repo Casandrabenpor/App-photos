@@ -3,7 +3,7 @@ body {
   background: linear-gradient(90deg, #cfecd0, #ffc5ca);
 }
 .reminderCardCollection {
-position: relative;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,10 +19,8 @@ position: relative;
 }
 
 .reminderCardCollection img {
-  margin-top: 50px;
-  flex-basis: 25%;
+ 
   width: 100%;
-  height: 400px;
   object-fit: cover;
 }
 
@@ -40,6 +38,4 @@ position: relative;
   height: 100%;
   background-color: rgba(234, 226, 226, 0.3);
   z-index: 1; /* Agrega esta propiedad para que el overlay esté por encima de la imagen */
-
 }
-

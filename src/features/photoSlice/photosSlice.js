@@ -9,7 +9,9 @@ export const photosSlice = createSlice({
   },
   reducers: {
     createPhoto: (state, action) => {
+      if (state.data.includes(action.payload) == false ){
       state.data.push(action.payload);
+      }
     },
     deletePhoto: (state, action) => {
       state.data.splice(
