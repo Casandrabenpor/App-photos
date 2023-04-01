@@ -15,16 +15,13 @@ export const loadPhotos = createAsyncThunk("photos/getPhotos", async (queryValue
     let photos = json.map((photo)=> ({
         url: photo.urls.small,
         id: photo.id,
-        description:photo.description,
+        description:photo.alt_description,
         width:photo.width,
         height:photo.height,
-        likes:photo.urls.likes,
+        likes:photo.likes,
         urlFull:photo.urls.full,
         urlThumb:photo.urls.thumb,
-        data:photo.updated_at
-
-
-        
+        date:photo.updated_at
     }));
     return photos;
   });

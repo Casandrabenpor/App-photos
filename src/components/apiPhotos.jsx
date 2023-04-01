@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addToFavorites } from "../features/buttonSlice/favoriteSlice";
+import { addToFavorites, removeFromFavorites } from "../features/buttonSlice/favoriteSlice";
 import { saveAs } from 'file-saver';
 import "./icon.css";
 
 export const ApiPhotos = (props) => {
-   const dispatch = useDispatch();
-  const [isFavorite, setIsFavorite]= useState(false);
-
-  useEffect(() => {
-    // Actualiza la lista de favoritos en función del estado del corazón
-    if (isFavorite) {
-      dispatch(addToFavorites(props.photo));
-    } 
-  }, [isFavorite, dispatch, props.photo]);
+    const dispatch = useDispatch();
 
   const handleHeart = (event) => {
     event.preventDefault(); // evita que la página se recargue
-    setIsFavorite(!isFavorite); // Actualiza el estado de isFavorite
-    dispatch(addToFavorites(props.photo));
+    //Si la foto ya esta en favorito
+    if (props.isFavorite){
+      // Cuando pulsas,se elimina de favoritos
+      dispatch(removeFromFavorites(props.photo));
+    }else{
+      //sino se añade a favoritos
+      dispatch(addToFavorites(props.photo));
+    }
+  
   };
   
 
@@ -28,13 +27,13 @@ export const ApiPhotos = (props) => {
   return (
     <div>
       <img className="img-cover" alt="random" src={props.photo.url} />
-      <a href="/" onClick={handleHeart}className={isFavorite ? "iconFavActive" : "iconFav"}>
-      {isFavorite ? <ion-icon name="heart"/> : <ion-icon name="heart-outline"/>}
+      <a href="/" onClick={handleHeart}className={props.isFavorite ? "iconFavActive" : "iconFav"}>
+      {props.isFavorite ? <ion-icon name="heart"/> : <ion-icon name="heart-outline"/>}
            
           </a>
 
       <a onClick={handleDownload} className="icon-download">
-        <ion-icon name="cloud-download-outline" value="download"></ion-icon>
+        <ion-icon name="cloud-download" value="download"></ion-icon>
       </a>
     </div>
   );

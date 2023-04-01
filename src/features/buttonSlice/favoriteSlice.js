@@ -10,7 +10,10 @@ export const favoriteSlice = createSlice({
     addToFavorites: (state, action) => {
       state.list.push(action.payload); // Agrega la nueva foto a la lista de favoritos
     },
+    removeFromFavorites:(state, action) => {
+      state.list = state.list.filter(photo => photo.id !== action.payload.id);
+    },
   },
 });
 
-export const{ addToFavorites } = favoriteSlice.actions;
+export const{ addToFavorites, removeFromFavorites } = favoriteSlice.actions;

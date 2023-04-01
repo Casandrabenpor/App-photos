@@ -12,7 +12,7 @@ ion-icon{
 
 
 .icon-download > ion-icon{
-    color: rgb(89, 216, 255);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     position: absolute;
     bottom: 50px;
@@ -22,5 +22,9 @@ ion-icon{
 }
 .iconRemove > ion-icon{
     color: black ;
+    position: absolute;
+    bottom: 236px;
+    right: 310px;
+    
   
 }

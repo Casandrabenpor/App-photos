@@ -22,6 +22,7 @@ export const HomePage = () => {
   const photosStatus = useSelector(getPhotosStatus);
   const photosData = useSelector(getAllPhotos);
   const photosError = useSelector(getPhotosError);
+  const favorites = useSelector(state => state.favorite.list);
 
   useEffect(() => {
     if (photosStatus === "idle") {
@@ -39,10 +40,13 @@ export const HomePage = () => {
       );
     } else if (photosStatus === "fulfilled") {
       Array.from(photosData).forEach((photo) => {
+        // Un metodo para saber si favorito es el mismo id que el de la pagina myphotos, te devuelve true o false
+        let isFavorite = favorites.some(favorite => favorite.id === photo.id); 
         photosListObjects.push(
           <>
             <div className="photo-wrapper">
-              <ApiPhotos photo={photo} />
+              
+              <ApiPhotos photo={photo} isFavorite={isFavorite}  />
             </div>
           </>
         );
