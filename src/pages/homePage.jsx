@@ -39,7 +39,6 @@ export const HomePage = () => {
       );
     } else if (photosStatus === "fulfilled") {
       Array.from(photosData).forEach((photo) => {
-        console.log("hola")
         photosListObjects.push(
           <>
             <div className="photo-wrapper">

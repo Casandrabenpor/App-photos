@@ -1,19 +1,26 @@
 ion-icon{
     color: red;
     font-size: 30px;
-    position: relative;
+    position: absolute;
     bottom: 50px;
+
     cursor: pointer;
     margin-right: 30px;
 }
 
 
+
+
 .icon-download > ion-icon{
     color: rgb(89, 216, 255);
     font-size: 30px;
-    position: relative;
-    bottom: 80px;
+    position: absolute;
+    bottom: 50px;
     cursor: pointer;
     left: 280px;
  
+}
+.iconRemove > ion-icon{
+    color: black ;
+  
 }

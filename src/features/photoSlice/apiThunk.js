@@ -13,7 +13,18 @@ export const loadPhotos = createAsyncThunk("photos/getPhotos", async (queryValue
     });
 
     let photos = json.map((photo)=> ({
-        url: photo.urls.small
+        url: photo.urls.small,
+        id: photo.id,
+        description:photo.description,
+        width:photo.width,
+        height:photo.height,
+        likes:photo.urls.likes,
+        urlFull:photo.urls.full,
+        urlThumb:photo.urls.thumb,
+        data:photo.updated_at
+
+
+        
     }));
     return photos;
   });
