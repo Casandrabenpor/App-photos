@@ -7,8 +7,18 @@ ion-icon{
     cursor: pointer;
     margin-right: 30px;
 }
-
-
+.positionBottom{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background: rgba(248, 14, 14, 0.5);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    bottom: 0px;
+  }
+ 
 
 
 .icon-download > ion-icon{
@@ -17,14 +27,14 @@ ion-icon{
     position: absolute;
     bottom: 50px;
     cursor: pointer;
-    left: 280px;
+    right: 0;
  
 }
 .iconRemove > ion-icon{
     color: black ;
     position: absolute;
     bottom: 236px;
-    right: 310px;
+    left: 3%;
     
   
 }

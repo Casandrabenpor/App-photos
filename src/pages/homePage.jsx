@@ -6,7 +6,7 @@ import { TopBar } from "../components/topBar";
 import { useLocation } from "react-router-dom";
 import { MainPhoto } from "../components/mainPhoto";
 import { Search } from "../components/search";
-import "../index.css";
+import "../components/cardCollection.css";
 import { ApiPhotos } from "../components/apiPhotos";
 import { loadPhotos } from "../features/photoSlice/apiThunk";
 import {
@@ -45,7 +45,6 @@ export const HomePage = () => {
         photosListObjects.push(
           <>
             <div className="photo-wrapper">
-              
               <ApiPhotos photo={photo} isFavorite={isFavorite}  />
             </div>
           </>
@@ -63,7 +62,7 @@ export const HomePage = () => {
       <TopBar location={location} />
       <MainPhoto className="MainPhoto" />
       <Search />
-      <section className="reminderCardCollection">{photosUI()}</section>
+      <div className="reminderCardCollection">{photosUI()}</div>
       <Footer className="footer" />
     </>
   );

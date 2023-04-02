@@ -25,8 +25,9 @@ export const ApiPhotos = (props) => {
   saveAs(props.photo.url,`${props.photo.id}.jpg`)
  }
   return (
-    <div>
-      <img className="img-cover" alt="random" src={props.photo.url} />
+    <>
+      <img  alt="random" src={props.photo.url}  />
+      <div className="positionBottom">
       <a href="/" onClick={handleHeart}className={props.isFavorite ? "iconFavActive" : "iconFav"}>
       {props.isFavorite ? <ion-icon name="heart"/> : <ion-icon name="heart-outline"/>}
            
@@ -35,6 +36,7 @@ export const ApiPhotos = (props) => {
       <a onClick={handleDownload} className="icon-download">
         <ion-icon name="cloud-download" value="download"></ion-icon>
       </a>
-    </div>
+      </div>
+    </>
   );
 };
