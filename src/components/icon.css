@@ -2,32 +2,29 @@ ion-icon{
     color: red;
     font-size: 30px;
     position: absolute;
-    bottom: 50px;
-
+    bottom: 20px;
     cursor: pointer;
-    margin-right: 30px;
+    margin-left: 15px;
 }
-.positionBottom{
+.positionBottom {
     position: absolute;
-    left: 0px;
-    right: 0px;
-    background: rgba(248, 14, 14, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    bottom: 0px;
+    justify-content: space-between;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
   }
- 
-
-
+  
 .icon-download > ion-icon{
-    color: rgb(0, 0, 0);
+    color:rgb(79 105 243) ;
     font-size: 30px;
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     cursor: pointer;
-    right: 0;
+    right: 45px;
  
 }
 .iconRemove > ion-icon{

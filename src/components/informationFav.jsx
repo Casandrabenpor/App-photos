@@ -17,16 +17,17 @@ export const InformationFav = (props) => {
   console.log(props.photo);
   return (
     <>
-      <img  alt="random" src={props.photo.url} />
-      <a href="/" onClick={handleRemove} className="iconRemove">
-        <ion-icon name="trash" />
-      </a>
+      <img alt="random" src={props.photo.url} style={{display:'inline-block'}} />
+        <a href="/" onClick={handleRemove} className="iconRemove">
+          <ion-icon name="trash" />
+        </a>
 
-      {/* <a href="/" onClick={handleInformation}>
+        {/* <a href="/" onClick={handleInformation}>
        <ion-icon name="information-circle"/>
        </a>  */}
-      <button>Mostrar boton</button>
 
+        <button>Mostrar boton</button>
+     
       <div>
         <p className="photo-description">
           <strong>Description:</strong> {props.photo.description}

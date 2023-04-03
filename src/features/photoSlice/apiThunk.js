@@ -4,7 +4,7 @@ export const loadPhotos = createAsyncThunk("photos/getPhotos", async (queryValue
     console.log(queryValue);
     
     const data = await fetch(
-        `https://api.unsplash.com/photos/random?client_id=c6-Zu3LQmTu2l5yW5lDfXq2L2Wpg1Q7f0kF286entVg&count=18&query=${queryValue}`
+        `https://api.unsplash.com/photos/random?client_id=c6-Zu3LQmTu2l5yW5lDfXq2L2Wpg1Q7f0kF286entVg&count=20&query=${queryValue}`
     ).catch((error) => {
         throw error;
     });
@@ -13,7 +13,7 @@ export const loadPhotos = createAsyncThunk("photos/getPhotos", async (queryValue
     });
 
     let photos = json.map((photo)=> ({
-        url: photo.urls.small,
+        url: photo.urls.regular,
         id: photo.id,
         description:photo.alt_description,
         width:photo.width,

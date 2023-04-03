@@ -8,7 +8,7 @@ export const TopBar = ({ location }) => {
       <img src={Logo} alt="Logo" width={140} height={140} />
       <ul>
         {location && location.pathname === "/myphotosPage" ? (
-          <li key="home">
+          <li key="home" >
             <Link to="/">HOME</Link>
           </li>
         ) : (
