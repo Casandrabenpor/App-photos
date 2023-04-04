@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { removeFromFavorites } from "../features/buttonSlice/favoriteSlice";
-
+import { Link } from "react-router-dom";
 import "./icon.css";
 
 export const InformationFav = (props) => {
@@ -15,20 +15,29 @@ export const InformationFav = (props) => {
   //   dispatch(informationFromFavorites(props.photo));
   // };
   console.log(props.photo);
+
   return (
     <>
-      <img alt="random" src={props.photo.url} style={{display:'inline-block'}} />
-        <a href="/" onClick={handleRemove} className="iconRemove">
-          <ion-icon name="trash" />
-        </a>
+      <img
+        alt="random"
+        src={props.photo.url}
+      />
+           <div className="positionBottom">
+      <a href="/" onClick={handleRemove} className="iconRemove">
+        <ion-icon name="trash" />
+      </a>
 
-        {/* <a href="/" onClick={handleInformation}>
+      {/* <a href="/" onClick={handleInformation}>
        <ion-icon name="information-circle"/>
        </a>  */}
+      <ul>
+        <li key="modal" className="iconInformation">
+        <Link to="/modalPage" state={props.photo}><ion-icon name="information-circle" /></Link>
+        </li>
+      </ul>
 
-        <button>Mostrar boton</button>
-     
-      <div>
+
+      {/* <div>
         <p className="photo-description">
           <strong>Description:</strong> {props.photo.description}
         </p>
@@ -39,11 +48,12 @@ export const InformationFav = (props) => {
           <strong>Height:</strong> {props.photo.height}
         </p>
         <p>
-          <strong>Likes:</strong> {props.photo.likes}
+          <strong>👍</strong> {props.photo.likes}
         </p>
         <p>
           <strong>Date:</strong> {props.photo.date}
         </p>
+      </div> */}
       </div>
     </>
   );

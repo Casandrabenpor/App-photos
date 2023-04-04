@@ -1,7 +1,7 @@
 import { TopBar } from "../components/topBar";
 import { useLocation } from "react-router-dom";
 import { SearchDescription } from "../components/searchDescription";
-import { InformationFav } from "../components/informationFav";
+import { InformationFav } from "../components/myPhotos";
 import { Footer } from "../components/footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";

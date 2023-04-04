@@ -30,8 +30,15 @@ ion-icon{
 .iconRemove > ion-icon{
     color: black ;
     position: absolute;
-    bottom: 236px;
+    bottom: 20px;
     left: 3%;
-    
+}
   
+.iconInformation ion-icon {
+    color:rgb(79 105 243);
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    right: 45px;
 }

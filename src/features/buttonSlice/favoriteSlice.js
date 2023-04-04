@@ -36,8 +36,14 @@ export const favoriteSlice = createSlice({
       }else{
         state.list = localStorage.data;  
       }
+    },
+    editFavorites:(state,action)=>{
+      deletePhotoFromLocalStorage(action.payload);
+      addPhotoToLocalStorage(action.payload);
+      let localStorage = readLocalStorage();
+      state.list = localStorage.data;
     }
   },
 });
 
-export const{ addToFavorites, removeFromFavorites , loadFavorites,filterFavorites} = favoriteSlice.actions;
+export const{ addToFavorites, removeFromFavorites , loadFavorites,filterFavorites,editFavorites} = favoriteSlice.actions;

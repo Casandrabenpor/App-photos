@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const TopBar = ({ location }) => {
   return (
     <div className="topBar">
-      <img src={Logo} alt="Logo" width={140} height={140} />
+      <Link to="/"><img src={Logo} alt="Logo"  width={140} height={140} /></Link>
       <ul>
         {location && location.pathname === "/myphotosPage" ? (
           <li key="home" >
