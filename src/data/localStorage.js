@@ -19,15 +19,13 @@ export const readLocalStorage = () => {
 export const isContained = (photoCandidate) => {
     let photosArrayInLocalStorage = readLocalStorage();
 
-    return photosArrayInLocalStorage.data.some(photo => photo.id == photoCandidate.id);
+    return photosArrayInLocalStorage.data.some(photo => photo.id === photoCandidate.id);
 };
 
 export const deletePhotoFromLocalStorage = (photoToDelete) => {
   let photosArrayInLocalStorage = readLocalStorage();
-  console.log(photosArrayInLocalStorage);
   if (photosArrayInLocalStorage != null && isContained(photoToDelete)) {
-    let photosDataFilterArray = photosArrayInLocalStorage.data.filter(photo => photo.id != photoToDelete.id);
-    console.log(photosDataFilterArray);
+    let photosDataFilterArray = photosArrayInLocalStorage.data.filter(photo => photo.id !== photoToDelete.id);
     let photosArrayUpdatedToString = JSON.stringify({data: photosDataFilterArray});
     localStorage.setItem("favoritePhotos", photosArrayUpdatedToString);
   }

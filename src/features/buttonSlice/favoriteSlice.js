@@ -9,7 +9,7 @@ export const favoriteSlice = createSlice({
   },
   reducers: {
     addToFavorites: (state, action) => {
-      //Añades y lees la foto en localstorage
+      //Añades y lee la foto en localstorage
       addPhotoToLocalStorage(action.payload);
       let localStorage = readLocalStorage();
       state.list = localStorage.data;

@@ -3,16 +3,15 @@
 }
 .modalCard {
   position: relative;
-
-  background-image: radial-gradient(circle at 0% 0%, #ffe5f7 0, #ffd9f3 12.5%, #fdcdf0 25%, #f0c0ed 37.5%, #e0b3eb 50%, #cda7ea 62.5%, #b79de9 75%, #9f96ea 87.5%, #8390ea 100%);
+ background-image: radial-gradient(circle at 0% 0%, #ffe5f7 0, #ffd9f3 12.5%, #fdcdf0 25%, #f0c0ed 37.5%, #e0b3eb 50%, #cda7ea 62.5%, #b79de9 75%, #9f96ea 87.5%, #8390ea 100%);
   width: 50%;
   height: 500px;
   box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.5);
-
   display: flex;
   flex-direction: column;
   gap: 3%;
   margin-left: 24%;
+  border-radius: 30px;
 
 
 }
@@ -34,7 +33,7 @@
    
 }
 .description p{
-    color: white;
+    color: black;
     font-size:20px ; 
     font-family: Arial, Helvetica, sans-serif;
 }

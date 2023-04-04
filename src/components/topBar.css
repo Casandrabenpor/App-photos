@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 1000px) {
   .topBar a {
-    font-size: 1.5rem;
+    font-size: 15px;
 
     font-family: Arial, Helvetica, sans-serif;
   }

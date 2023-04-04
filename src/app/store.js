@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { photosSlice } from '../features/photoSlice/photosSlice';
+import { photosSlice } from '../features/photoSlice/searchSlice';
 import { favoriteSlice } from '../features/buttonSlice/favoriteSlice';
 
 export const store = configureStore({

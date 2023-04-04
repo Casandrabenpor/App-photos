@@ -3,57 +3,30 @@ import { removeFromFavorites } from "../features/buttonSlice/favoriteSlice";
 import { Link } from "react-router-dom";
 import "./icon.css";
 
-export const InformationFav = (props) => {
+export const Favorites = (props) => {
   const dispatch = useDispatch();
 
   const handleRemove = (event) => {
-    console.log("Agregando a basuraaaaa...");
+    // Agregando a basura
     event.preventDefault(); // evita que la página se recargue
     dispatch(removeFromFavorites(props.photo));
   };
-  // const handleInformation = (event) => {
-  //   dispatch(informationFromFavorites(props.photo));
-  // };
-  console.log(props.photo);
 
   return (
     <>
-      <img
-        alt="random"
-        src={props.photo.url}
-      />
-           <div className="positionBottom">
-      <a href="/" onClick={handleRemove} className="iconRemove">
-        <ion-icon name="trash" />
-      </a>
+      <img alt="random" src={props.photo.url} />
+      <div className="positionBottom">
+        <a href="/" onClick={handleRemove} className="iconRemove">
+          <ion-icon name="trash" />
+        </a>
 
-      {/* <a href="/" onClick={handleInformation}>
-       <ion-icon name="information-circle"/>
-       </a>  */}
-      <ul>
-        <li key="modal" className="iconInformation">
-        <Link to="/modalPage" state={props.photo}><ion-icon name="information-circle" /></Link>
-        </li>
-      </ul>
-
-
-      {/* <div>
-        <p className="photo-description">
-          <strong>Description:</strong> {props.photo.description}
-        </p>
-        <p>
-          <strong>Width:</strong> {props.photo.width}
-        </p>
-        <p>
-          <strong>Height:</strong> {props.photo.height}
-        </p>
-        <p>
-          <strong>👍</strong> {props.photo.likes}
-        </p>
-        <p>
-          <strong>Date:</strong> {props.photo.date}
-        </p>
-      </div> */}
+        <ul>
+          <li key={props.photo.id}  className="iconInformation">
+            <Link to="/modalPage" state={props.photo}>
+              <ion-icon name="information-circle" />
+            </Link>
+          </li>
+        </ul>
       </div>
     </>
   );
