@@ -4,7 +4,7 @@ export const addPhotoToLocalStorage = (photo) => {
     photosArrayInLocalStorage.data.push(photo);
     localStorage.setItem("favoritePhotos", JSON.stringify(photosArrayInLocalStorage));
   }
-  // localStorage.setItem("favoritePhotos", photosArrayUpdatedToString);
+ 
 };
 
 export const readLocalStorage = () => {

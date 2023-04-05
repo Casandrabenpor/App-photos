@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { HomePage } from "./pages/homePage";
 import { MyPhotos } from "./pages/myphotosPage";
 import { Modal } from "./pages/modalPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter , Routes, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 
 
@@ -15,13 +15,13 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/myphotosPage" element={<MyPhotos />} /> 
         <Route path="/modalPage" element={<Modal />}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </Provider>
   </React.StrictMode>
 );

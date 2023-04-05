@@ -21,7 +21,7 @@ export const Favorites = (props) => {
         </a>
 
         <ul>
-          <li key={props.photo.id}  className="iconInformation">
+          <li key={`info-${props.photo.id}`} className="iconInformation">
             <Link to="/modalPage" state={props.photo}>
               <ion-icon name="information-circle" />
             </Link>
