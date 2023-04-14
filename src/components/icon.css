@@ -28,7 +28,7 @@ ion-icon{
  
 }
 .iconRemove > ion-icon{
-    color: black ;
+    color: red ;
     position: absolute;
     bottom: 20px;
     left: 3%;
