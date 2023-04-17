@@ -6,6 +6,7 @@ import { Footer } from "../components/footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { loadFavorites } from "../features/buttonSlice/favoriteSlice";
+import { Select } from "../components/select";
 
 export const MyPhotos = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ export const MyPhotos = () => {
       <>
         <TopBar location={location} />
         <SearchDescription/>
+        <Select/>
         <section className="reminderCardCollection">{favoritesElement}</section>
         <Footer className="footer"/>  
       </>

@@ -21,7 +21,8 @@ export const ApiPhotos = (props) => {
     }
   };
 
-  const handleDownload = () => {
+  const handleDownload = (event) => {
+    event.preventDefault();
     saveAs(props.photo.url, `${props.photo.id}.jpg`);
   };
   return (

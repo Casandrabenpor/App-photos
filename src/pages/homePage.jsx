@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import React from 'react';
 import { TopBar } from "../components/topBar";
 import { useLocation } from "react-router-dom";
-import { MainPhoto } from "../components/mainPhoto";
+// import { MainPhoto } from "../components/mainPhoto";
 import { Search } from "../components/search";
 import "../components/cardCollection.css";
 import { ApiPhotos } from "../components/homePhotos";
@@ -61,7 +61,7 @@ export const HomePage = () => {
   return (
     <>
       <TopBar location={location} />
-      <MainPhoto className="MainPhoto" />
+      {/* <MainPhoto className="MainPhoto" /> */}
       <Search />
       <div className="reminderCardCollection">{photosUI()}</div>
       <Footer className="footer" />

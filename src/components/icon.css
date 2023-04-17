@@ -1,44 +1,48 @@
-ion-icon{
-    color: red;
-    font-size: 30px;
-    position: absolute;
-    bottom: 20px;
-    cursor: pointer;
-    margin-left: 15px;
+ion-icon {
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  margin-left: 15px;
 }
 .positionBottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
-.icon-download > ion-icon{
-    color:rgb(79 105 243) ;
-    font-size: 30px;
-    position: absolute;
-    bottom: 20px;
-    cursor: pointer;
-    right: 45px;
- 
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
 }
-.iconRemove > ion-icon{
-    color: red ;
-    position: absolute;
-    bottom: 20px;
-    left: 3%;
+
+.icon-download > ion-icon {
+  color: rgb(79, 216, 243);
+  font-size: 30px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  right: 45px;
 }
-  
+.icon-download2 > ion-icon {
+  color: rgb(79, 216, 243);
+  right: 90px;
+  cursor: pointer;
+}
+.iconRemove > ion-icon {
+  color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 3%;
+}
+
 .iconInformation ion-icon {
-    color:rgb(79 105 243);
-    font-size: 30px;
-    position: absolute;
-    bottom: 20px;
-    cursor: pointer;
-    right: 45px;
+  color: rgb(79 105 243);
+  font-size: 30px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  right: 45px;
 }
