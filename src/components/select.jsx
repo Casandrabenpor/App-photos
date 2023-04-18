@@ -8,7 +8,6 @@ export const Select = () => {
   const handleSelectOrder = (event) => {
     event.preventDefault();
     const orderSelect = event.target.value;
-    console.log("Ordenar por likes");
     dispatch(orderFavorites(orderSelect));
    
   };

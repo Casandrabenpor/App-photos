@@ -88,4 +88,7 @@ ul {
     margin-left: 12%;
     border-radius: 30px;
   }
+  .button_save{
+    width: 25%;
+  }
 }
