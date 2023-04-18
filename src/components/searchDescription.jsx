@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import "./search.css";
+import "../styles/search.css";
 import { filterFavorites } from "../features/buttonSlice/favoriteSlice";
 
 export const SearchDescription = () => {

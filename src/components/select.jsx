@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import "./select.css";
+import "../styles/select.css";
 import { orderFavorites } from "../features/buttonSlice/favoriteSlice";
 
 export const Select = () => {

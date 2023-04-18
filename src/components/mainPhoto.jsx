@@ -1,4 +1,4 @@
-import "./mainPhoto.css";
+import "../styles/mainPhoto.css";
 import Background from "../assets/mar2.jpg";
 
 export const MainPhoto = (props) => {

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import "./search.css";
+import "../styles/search.css";
 import {loadPhotos } from "../features/photoSlice/apiThunk.js";
 
 export const Search = () => {

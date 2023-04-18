@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { removeFromFavorites } from "../features/buttonSlice/favoriteSlice";
 import { Link } from "react-router-dom";
 import { saveAs } from "file-saver";
-import "./icon.css";
+import "../styles/icon.css";
 
 export const Favorites = (props) => {
   const dispatch = useDispatch();

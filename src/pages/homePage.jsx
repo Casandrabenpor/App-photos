@@ -7,7 +7,7 @@ import { TopBar } from "../components/topBar";
 import { useLocation } from "react-router-dom";
 // import { MainPhoto } from "../components/mainPhoto";
 import { Search } from "../components/search";
-import "../components/cardCollection.css";
+import "../styles/cardCollection.css";
 import { ApiPhotos } from "../components/homePhotos";
 import { loadPhotos } from "../features/photoSlice/apiThunk";
 import {

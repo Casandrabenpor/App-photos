@@ -4,7 +4,7 @@ import {
   removeFromFavorites,
 } from "../features/buttonSlice/favoriteSlice";
 import { saveAs } from "file-saver";
-import "./icon.css";
+import "../styles/icon.css";
 
 export const ApiPhotos = (props) => {
   const dispatch = useDispatch();

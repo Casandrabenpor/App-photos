@@ -52,6 +52,7 @@ export const favoriteSlice = createSlice({
       let localStorage = readLocalStorage();
       state.list = localStorage.data;
     },
+    //Para ordenar el date, width,height y likes de mis favoritos
     orderFavorites: (state, action) => {
       let favorites = state.list;
 
@@ -80,7 +81,7 @@ export const favoriteSlice = createSlice({
     },
   },
 });
-
+//función para ordenar los dias,meses y años en js
 function createDateFromString(dateString){
   const parts = dateString.split("/");
 

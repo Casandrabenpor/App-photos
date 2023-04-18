@@ -9,15 +9,15 @@ export const Modal = () => {
   const location = useLocation();
   const photo = location.state;
 
-  const handleInformation = (event)=>{
+  const handleInformation = (event) => {
     event.preventDefault(); // evita que la página se recargue
     photo.description = event.currentTarget.value;
     dispatch(editFavorites(photo));
-  }
+  };
   return (
     <>
       <TopBar />
-     
+
       <div className="modalCard">
         <div className="closeInfoModal ">
           <Link to="/myphotosPage">
@@ -28,7 +28,13 @@ export const Modal = () => {
           <p>
             <strong>Description:</strong>
           </p>
-            <input type="text" id="description" name="description" onChange={handleInformation} defaultValue={photo.description} />
+          <input
+            type="text"
+            id="description"
+            name="description"
+            onChange={handleInformation}
+            defaultValue={photo.description}
+          />
           <p>
             <strong>Width:</strong> {photo.width}
           </p>
@@ -42,6 +48,9 @@ export const Modal = () => {
             <strong>Date:</strong> {photo.date}
           </p>
         </div>
+        <Link to="/myphotosPage">
+          <button className="button_save">Save</button>
+        </Link>
       </div>
     </>
   );
