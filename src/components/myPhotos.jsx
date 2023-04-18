@@ -10,7 +10,11 @@ export const Favorites = (props) => {
   const handleRemove = (event) => {
     // Agregando a basura
     event.preventDefault(); // evita que la página se recargue
-    dispatch(removeFromFavorites(props.photo));
+    let result = window.confirm("Do you want to delete this photo?");
+    if(result === true){
+      dispatch(removeFromFavorites(props.photo));
+    }
+  
   };
   const handleDownload = (event) => {
     event.preventDefault();
@@ -22,7 +26,7 @@ export const Favorites = (props) => {
     <>
       <img alt="random" src={props.photo.url} />
       <div className="positionBottom">
-        <a href="/" onClick={handleRemove} className="iconRemove">
+        <a href="/" onClick={handleRemove} className="iconRemove"  >
           <ion-icon name="trash" />
         </a>
         <a href="/" onClick={handleDownload} className="icon-download2">
