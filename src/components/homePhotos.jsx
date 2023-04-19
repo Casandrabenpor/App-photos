@@ -35,7 +35,7 @@ export const ApiPhotos = (props) => {
           className={props.isFavorite ? "iconFavActive" : "iconFav"}
         >
           {props.isFavorite ? (
-            <ion-icon name="heart" />
+           <ion-icon name="heart"/>
           ) : (
             <ion-icon name="heart-outline" />
           )}

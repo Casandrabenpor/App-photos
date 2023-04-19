@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { loadFavorites } from "../features/buttonSlice/favoriteSlice";
 import { Select } from "../components/select";
+import "./animation.css";
+import loading from "../assets/loading.avif";
 
 export const MyPhotos = () => {
   const location = useLocation();
@@ -23,14 +25,30 @@ export const MyPhotos = () => {
     // Especificamos que esta acción debe ejecutarse solo cuando los valores de dependencia "loaded" o "dispatch" cambian
   },[loaded, dispatch]);
 
-    const favoritesElement = Array.from(favorites).map((photo) => {
-      return(
-        <>
-          <div className="photo-wrapper">
-            <Favorites photo={photo} />
-          </div>
-        </>);
-    });
+    // const favoritesElement = Array.from(favorites).map((photo) => {
+    //   return(
+    //     <>
+    //       <div className="photo-wrapper">
+    //         <Favorites photo={photo} />
+    //       </div>
+    //     </>);
+    // });
+    let favoritesElement;
+
+if (favorites.length > 0) {
+  favoritesElement = Array.from(favorites).map((photo) => (
+    <div className="photo-wrapper">
+      <Favorites photo={photo} />
+    </div>
+  ));
+} else {
+  favoritesElement = (
+    <div className="tilt-in-top-1">
+      <img src={loading} alt="cat loading" />
+    </div>
+  );
+}
+
 
     return (
       <>
