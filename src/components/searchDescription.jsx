@@ -8,12 +8,12 @@ export const SearchDescription = () => {
   
     const handleSearch = (event) => {
       event.preventDefault();
-      const query = event.target.elements.search.value;
+      const query = event.target.value;
       dispatch(filterFavorites(query)); 
     };
   return (
-    <form  className="search-form" onSubmit={handleSearch}>
-      <input type="text" placeholder="Search your image"className="search" name="search" />
+    <form  className="search-form" >
+      <input type="text" placeholder="Search your image"className="search" name="search" onChange={handleSearch} />
       <button type="submit"  className="search-button">
         🔎
       </button>

@@ -37,7 +37,7 @@ export const MyPhotos = () => {
 
 if (favorites.length > 0) {
   favoritesElement = Array.from(favorites).map((photo) => (
-    <div className="photo-wrapper">
+    <div id={photo.id} className="photo-wrapper">
       <Favorites photo={photo} />
     </div>
   ));
